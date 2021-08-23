@@ -1,9 +1,38 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: Montserrat-bold;
+    src: url(../fonts/Montserrat-Bold.ttf);
+}
+
 html{
     overflow-x: hidden;
 }
 
 body{
     min-width: 350px;
+}
+
+.row{
+    padding: 0%;
+    margin: 0%;
+}
+
+.grafismo_2{
+    background-image: url(../img/grafismo_3.png);
+    background-size: 15%;
+    background-repeat: no-repeat;
+    background-position: right;
+    
+}
+.grafismo_3{
+    background-image: url(../img/grafismo_2.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center top;
 }
 
 .navbar{
@@ -13,35 +42,31 @@ body{
     z-index: 99;
     width: 100%;
     top: 0px;
-    height: 80px;
+    height: 100px;
+}
+
+.navbar-collapse {
+    flex-grow: 0;
 }
 
 .navbar img{
-    max-width: 150px;
+    max-width: 200px;
     margin-left: 30px;
 }
 
-#carouselExampleControls{
-    margin-bottom: 60px;
+#carouselExampleControls .carousel-control-next-icon, #carouselExampleControls .carousel-control-prev-icon {
+    background-color: #008bc68c;
+    width: 60px;
+    height: 60px;
 }
 
-@media (max-width: 645px){
-    .navbar{
-        height: 60px !important;
-    }
-    .navbar img{
-        max-width: 100px;
-    }
-    #carouselExampleControls{
-        margin-top: 60px;
-        margin-bottom: 60px;
-    }
+#carouselExampleControls{
+    margin-top: 100px;
 }
 
 .navbar-toggler {
     font-size: 0.75rem;
 }
-
 
 .navbar-collapse {
     background-color: white;
@@ -50,15 +75,16 @@ body{
 
 .navbar-light .navbar-nav .nav-link {
     color: black;
-    font-size: 16px;
-}
-.navbar-light .navbar-nav .nav-link:hover{
-    color: #008bc6;
+    font-size: 22px;
+    text-align: center;
 }
 
-#carouselExampleControls .carousel-control-next-icon, #carouselExampleControls .carousel-control-prev-icon {
-    background-color: #008bc6;
-    padding: 30px;
+.dropdown-item{
+    font-size: 22px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+    color: #008bc6;
 }
 
 @media (max-width: 645px){
@@ -89,12 +115,10 @@ body{
 .cards img{
     height: 110px;
     width: 130px;
+    margin-bottom: 20px;
 }
 
 @media (max-width: 645px){
-    .w-100 {
-        height: 300px;
-    }
     .cards{
         text-align: center;
         font-size: 20px;
@@ -107,27 +131,34 @@ body{
         padding: 20px;
     }
     .cards img{
-        height: 70px;
+        height: 60px;
         width: 70px;
     }
 }
 
 .titulo_cards{
-    font-weight: 900;
+    font-family: Montserrat-bold;
+    color: #008ac3;
+    height: 60px;
 }
 
 
 /*faixa azul tratamentos*/
 .faixa_azul{
-    padding: 30px 50px;
+    background-image: url(../img/grafismo_1.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
     background-color: #008ac3;
+    padding: 30px 80px 30px 40px;
     width: 80%;
-    border-radius: 0px 250px 250px 0px;
+    border-radius: 0px 350px 350px 0px;
 }
 
 .titulo_fa{
     font-size: 48px;
     color: white;
+    margin-bottom: 50px;
 }
 
 .titulo-card-fa{
@@ -141,11 +172,19 @@ body{
 
 .cards-fa img{
     width: 100%;
-    height: 180px;
     border-radius: 30px 30px 0px 0px;
 }
 
 @media (max-width: 1200px){
+    .navbar img{
+        max-width: 150px;
+    }
+    .nav-link{
+        font-size: 16px;
+    }
+    .dropdown-item{
+        font-size: 16px;
+    }
     .titulo-card-fa{
         font-size: 17px;
     }
@@ -155,9 +194,11 @@ body{
     .faixa_azul{
         width: 95%;
     }
+    .grafismo_2{
+        background-image: none;
+    }
     .cards-fa img{
         width: 100%;
-        height: 100px;
     }
     .titulo_fa{
         font-size: 38px;
@@ -166,9 +207,9 @@ body{
 
 @media (max-width: 750px){
     .faixa_azul{
-        padding: 20px 10px;
+        padding: 20px 30px;
         background-color: #008ac3;
-        width: 98%;
+        width: 99%;
         border-radius: 0px 200px 200px 0px;
     }
     .titulo_fa{
@@ -178,7 +219,7 @@ body{
 
 @media (max-width: 450px){
     .titulo_fa{
-        font-size: 25px;
+        font-size: 20px;
     }
 }
 
@@ -194,59 +235,35 @@ body{
 .cards-fa{
     float: left;
     background-color: white;
-    width: 30%;
+    width: 32%;
+    margin-right: 1.3%;
     border-radius: 30px;
-    margin-right: 10px;
 }
 
 /* Equipe */
 
 .equipe{
-    height: 500px;
     margin-top: 80px;
+    margin-bottom: 40px;
     padding: 20px;
 }
 
 .titulo_equipe{
     color: black;
-    font-size: 28px;
+    font-size: 48px;
     text-align: center;
-    margin: 20px 0px 40px 0px;
-}
-
-#carouselExampleIndicators{
-    min-width: 350px;
-    padding: 0px;
 }
 
 .card-equipe{
-    width: 24%;
-    height: 300px;
-    margin: 0% 4%;
-    margin-top: 10%;
+    width: 33%;
+    margin-top: 40px;
     float: left;
-    background-color: white;
     border-radius: 20px;
-    box-shadow: 0px 0px 1em black;
     text-align: center;
 }
 
-@media (max-width: 1200px){
-    .card-equipe{
-        height: 250px;
-    }
-}
-
-@media (max-width: 950px){
-    .card-equipe{
-        height: 225px;
-    }
-}
-
-@media (max-width: 775px){
-    .card-equipe{
-        height: 175px;
-    }
+.card-equipe_2{
+    width: 50%;
 }
 
 @media (max-width: 645px){
@@ -254,25 +271,25 @@ body{
         padding: 10px;
     }
     .card-equipe{
-        width: 29%;
-        margin: 10% 2% 0% 2%;
-        height: 150px;
+        width: 31%;
+        margin: 1%;
     }
-}
-
-@media (max-width: 500px){
-    .card-equipe{
-        height: 100px;
+    .card-equipe_2{
+        width: 48%;
+        margin: 1%;
+    }
+    .card-equipe p{
+        font-size: 14px;
     }
 }
 
 .card-equipe img{
-    height: 120%;
-    max-height: 480px;
-    padding: 0px 15px;
     width: 100%;
     z-index: 99;
-    margin-top: -25%;
+}
+
+.card-equipe_2 img{
+    width: 60%;
 }
 
 .carousel-indicators {
@@ -281,20 +298,7 @@ body{
 
 .nome-equipe{
     background-color: white;
-    width: 24%;
-    margin: 15px 4%;
-    float: left;
     text-align: center;
-}
-
-@media (max-width: 645px){
-    .nome-equipe{
-        background-color: white;
-        width: 29%;
-        margin: 2% 2% 0% 2%;
-        float: left;
-        text-align: center;
-    }
 }
 
 .button-equipe{
@@ -310,17 +314,15 @@ body{
 
 .faixa_azul_t{
     width: 100%;
-    max-height: 350px;
-    margin-top: 600px;
+    margin-top: 500px;
     background-color: #008ac3;
     text-align: center;
 }
 
 .faixa_azul_t img{
-    width: 550px;
-    margin-top: -200px;
-    height: 550px;
+    width: 100%;
     left: 0px;
+    margin-top: -80px;
 }
 
 .icone_faixa_azul_t{
@@ -337,12 +339,28 @@ body{
 
 .texto_faixa_azul_t{
     color: white;
-    font-size: 22px;
-    padding: 10px 40px;
+    font-size: 32px;
+}
+
+@media (min-width: 1600px){
+    .responsive_faixa_t{
+        padding: 100px 0px;
+    }
+    .texto_faixa_azul_t{
+        font-size: 32px;
+        padding: 20px 40px;
+    }
+}
+
+@media (max-width: 1200px){
+    .texto_faixa_azul_t{
+        font-size: 24px;
+        padding: 0%;
+    }
 }
 
 .button_faixa_azul_t{
-    width: 200px;
+    width: 250px;
     height: 50px;
     font-size: 22px;
     background-color: transparent;
@@ -354,14 +372,10 @@ body{
 @media (max-width: 1100px){
     .faixa_azul_t{
         width: 100%;
-        max-height: 250px;
-        margin-top: 300px;
     }
     
     .faixa_azul_t img{
-        width: 400px;
-        margin-top: -150px;
-        height: 400px;
+        width: 100%;
     }
     
     .icone_faixa_azul_t{
@@ -379,15 +393,15 @@ body{
     
     .texto_faixa_azul_t{
         color: white;
-        font-size: 18px;
         padding: 5px 20px;
         margin: 2px;
     }
     
     .button_faixa_azul_t{
-        width: 180px;
+        width: 250px;
         height: 50px;
         font-size: 18px;
+        text-align: center;
         background-color: transparent;
         color: white;
         border-radius: 3px;
@@ -395,19 +409,22 @@ body{
     }
 }
 
-@media (max-width: 800px){
+@media (max-width: 900px){
+    .img_faixa_azul{
+        width: 60%;
+    }
     .faixa_azul_t{
         width: 80%;
         border-radius: 0px 120px 0px 0px;
         max-height: 300px;
-        margin-top: 180px;
+        margin-top:250px;
     }
     .responsive_faixa_t{
         flex: 100%;
-        margin-top: -10px;
         background-color: #008ac3;
-        text-align: left;
-        padding: 30px 40px;
+        text-align: center;
+        margin-top: -20px;
+        padding: 50px 30px;
         border-radius: 0px 0px 120px 0px;
     }
     .icone_faixa_azul_t{
@@ -417,29 +434,32 @@ body{
     }
     .texto_faixa_azul_t{
         color: white;
-        font-size: 18px;
+        font-size: 22px;
         padding: 20px 30px 30px 0px;
-        margin: 2px 0px;
+        margin: 10px 0px;
     }
 }
 
 @media (max-width: 550px){
     .faixa_azul_t img{
-        width: 300px;
-        margin-top: -150px;
-        height: 300px;
+        width: 100%;
     }
     .faixa_azul_t{
         width: 98%;
         border-radius: 0px 120px 0px 0px;
         max-height: 300px;
-        margin-top: 100px;
+        margin-top: 200px;
     }
     .texto_faixa_azul_t{
         padding: 0px;
     }
     .responsive_faixa_t{
+        padding: 60px 20px;
         text-align: center;
+    }
+    .button_faixa_azul_t{
+        width: 200px;
+        font-size: 14px;
     }
 }
 
@@ -448,4 +468,291 @@ body{
     color: #008ac3;
     border-radius: 3px;
     border: solid white 3px
+}
+
+.escrita_dep{
+    width: 50%;
+    padding-left: 40px;
+    float: left;
+}
+
+.img_dep{
+    width: 48%;
+    padding: 0%;
+    height: 100%;
+    float: right;
+    margin-right: 1%;
+    text-align: left;
+    box-shadow: 0px 0px 0.4em rgba(0, 0, 0, 0.445);
+    border-radius: 20px;
+}
+
+@media (max-width: 900px){
+    .titulo_equipe {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 800px){
+    .navbar{
+        height: 60px;
+    }
+    .navbar img{
+        max-width: 100px;
+        margin-left: 30px;
+    }
+    #carouselExampleControls .carousel-control-next-icon, #carouselExampleControls .carousel-control-prev-icon {
+        width: 30px;
+        height: 30px;
+    }
+    #carouselExampleControls{
+        margin-top: 60px;
+    }
+    .titulo_cards {
+        height: 80px;
+    }
+    .cards .col-sm-4 {
+        width: 100%;
+        border-radius: 20px;
+        border: solid 2px #008bc6;
+        margin: 20px 0px;
+        padding: 20px;
+    }
+    .escrita_dep{
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 750px){
+    .titulo_equipe {
+        font-size: 30px;
+    }
+    .titulo-card-fa {
+        font-size: 14px;
+    }
+    .titulo_cards {
+        height: auto;
+    }
+}
+
+@media (max-width: 450px){
+    .escrita_dep{
+        width: 100%;
+        padding-left: 40px;
+        float: left;
+    }
+    .img_dep{
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+    .texto_faixa_azul_t{
+        font-size: 14px;
+    }
+    .titulo_faixa_azul_t {
+        font-size: 20px;
+    }
+    .icone_faixa_azul_t{
+        width: 20% !important;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        font-size: 14px;
+    }
+    .cards p{
+        font-size: 14px;
+    }
+    .titulo_cards {
+        font-size: 18px !important;
+    }
+    .faixa_azul {
+        padding: 20px 30px 20px 10px;
+    }
+    .titulo_equipe{
+        font-size: 20px;
+    }
+}
+
+.depoimento{
+    width: 100%;
+    margin-top: 200px;
+}
+
+@media (max-width: 900px){
+    .depoimento{
+        margin-top: 500px;
+    }
+}
+
+@media (max-width: 500px){
+    .depoimento{
+        margin-top: 300px;
+    }
+}
+
+.escrita_dep img{
+    max-width: 80%;
+}
+
+.titulo_dep{
+    text-align: left;
+}
+
+.destaque{
+    color: #008ac3;
+}
+
+.text_dep{
+    color: black;
+    padding: 0%;
+}
+
+.img_dep img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.indicators_dep{
+    width: 30px!important;
+    height: 30px!important;
+    border-radius: 50%!important;
+    background-color: #00C5FF!important;
+}
+
+@media (max-width:700px){
+    .indicators_dep{
+        width: 15px!important;
+        height: 15px!important;
+    }
+}
+
+.footer{
+    margin-top: 100px;
+}
+
+.roda-pe{
+    background-color: #008ac3;
+    padding: 20px;
+    color: white;
+    font-size: 14px;
+}
+
+.roda-pe img{
+    max-width: 100%;
+}
+
+.titulo_roda_pe{
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.roda-pe a{
+    text-decoration: none;
+    color: white;
+}
+
+.roda-pe p{
+    margin-bottom: 2px;
+}
+
+@media (min-width: 1500px){
+    .roda-pe{
+        font-size: 18px;
+    }
+    .titulo_roda_pe{
+        font-size: 22px;
+    }
+}
+
+
+.clinicas{
+    background-image: url(../img/grafismo_4.png), url(../img/grafismo_3.png);
+    background-size: 20%, 20%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, bottom right;
+    padding: 200px 120px;
+}
+
+.card_clinica{
+    width: 32%;
+    margin: 0.5%;
+    padding: 0%;
+    border-radius: 20px;
+    border: solid 2px #008ac3;
+    min-height: 400px;
+}
+
+@media (max-width: 1200px){
+    .card_clinica{
+        width: 48%;
+    }
+}
+
+@media (max-width: 1200px){
+    .card_clinica{
+        width: 100%;
+    }
+}
+
+.img_clinica img{
+    border-radius: 20px 20px 0px 0px;
+    max-width: 100%;
+}
+
+.legenda_clinica{
+    background-color: white;
+    border-radius: 20px;
+    padding: 50px;
+    font-size: 20px;
+    color: #008ac3;
+    font-family: Montserrat-bold;
+}
+
+.fechar{
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: white;
+}
+
+.modal-header{
+    margin: -1px;
+    text-align: center;
+    border-radius: 18px 18px 0px 0px;
+    background-color: #008ac3;
+}
+
+.modal-header p{
+    margin: 0%;
+}
+
+#titulo_apresentar{
+    margin: 0 auto;
+    font-size: 22px;
+    color: white;
+}
+
+#titulo_apresentar_2{
+    margin: 0 auto;
+    font-size: 22px;
+    color: white;
+}
+
+.modal-body{
+    border-radius: 0px 0px 20px 20px;
+    background-color: #0089c39d;
+    color: white;
+}
+
+.exit_modal{
+    font-size: 30px;
+    color: white;
+}
+
+.modal-content{
+    border-radius: 20px;
+}
+
+#img_modal img{
+    max-width: 100%;
+    border-radius: 20px;
 }
